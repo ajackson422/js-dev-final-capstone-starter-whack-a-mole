@@ -184,7 +184,10 @@ function toggleVisibility(hole){
 */
 function updateScore() {
   // TODO: Write your code here
+// Points is gloabal variable 
   points += 1;
+   // Score is the element where it will display the score
+  //const scoreElement = document.getElementById("score");
   score.textContent = points;
   return points;
 }
@@ -211,7 +214,7 @@ function clearScore() {
 function updateTimer() {
   // TODO: Write your code here.
   // hint: this code is provided to you in the instructions.
-  if (time > 0) {
+  if (time > 0){
     time -= 1;
     timerDisplay.textContent = time;
 
@@ -225,6 +228,19 @@ function updateTimer() {
 * the updateTimer function get called. This function is already implemented
 *
 */
+// Clear any existing intervals
+// clearInterval(initialIntervalId);
+
+let gameStarted = false; // Added this line to define gameStarted variable
+// Start the game loop only when the game actually starts
+intervalId = setInterval(() => {
+  // Only show moles if the game has started
+  if (gameStarted) {
+    showUp();
+  }
+}, 1500);
+
+
 function startTimer() {
   // TODO: Write your code here
   timer = setInterval(updateTimer, 1000);
