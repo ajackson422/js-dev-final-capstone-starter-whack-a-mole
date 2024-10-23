@@ -162,11 +162,6 @@ unction showUp() {
   }
 }
 
-
-
-
-
-
 /**
 *
 * The purpose of this function is to show and hide the mole given
@@ -306,9 +301,7 @@ function whack(event) {
 */
 function setEventListeners(){
   // TODO: Write your code here
-  moles.forEach(mole => {
-    mole.addEventListener('click', whack);
-  });
+   moles.forEach(mole => mole.addEventListener('click', whack));
   return moles;
 }
 
@@ -330,7 +323,7 @@ function setDuration(duration) {
 *
 */
 function stopGame(){
-  // stopAudio(song);  //optional
+  stopAudio(song);  //optional
   clearInterval(timer);
   clearInterval(intervalId);
   stopTimer();  // Stop both timers
@@ -362,10 +355,16 @@ function startGame(difficulty){
   setDuration(5); // Adjust the duration for hard difficulty
 }
 
+  // Play the audio song when the game starts
+  play();
+  
+  console.log("Before showUp");
+  console.log("After showUp");
 
- clearScore();
-  startTimer();
+  
   showUp();
+  clearScore();
+  startTimer();
   setEventListeners();
   return "game started";
 }
