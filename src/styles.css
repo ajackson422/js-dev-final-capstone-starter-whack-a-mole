@@ -39,6 +39,31 @@ h2 {
     color: white;
 }
 
+/* Mallet and interactive movement coding*/
+.cursor{
+  height: 110px;
+  width: 100px;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: 100% 100%;
+  transition: transform 0.1s;
+  pointer-events: none; /* Set pointer-events to none to allow interactions with elements underneath */
+}
+
+
+.cursor.active{
+  transform: translate(-50%, -50%) rotate(45deg);
+  
+}
+
+
+
+
+
+
+
 .grid {
   width: 600px;
   height: 400px;
