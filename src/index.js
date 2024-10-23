@@ -365,10 +365,10 @@ function startGame(difficulty){
   console.log("After showUp");
 
   
-  showUp();
+ // showUp(); 
+  setEventListeners();
   clearScore();
   startTimer();
-  setEventListeners();
   return "game started";
 }
 
