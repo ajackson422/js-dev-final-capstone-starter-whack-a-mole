@@ -116,11 +116,14 @@ lastHole = hole;
 */
 function gameOver() {
   // TODO: Write your code here
+  // If the time is greater than 0 then continue the game
   if (time > 0) {
+    // call showUp and get the timeoutId
     timeoutID = showUp()
     return timeoutID
   } else {
-    gameStopped = stopGame()
+    // If time is 0, stop the game 
+    const gameStopped = stopGame()
     return gameStopped
   }
 }
