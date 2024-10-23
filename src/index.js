@@ -7,7 +7,6 @@ const timerDisplay = document.querySelector('#timer'); // use querySelector() to
 const cursor = document.querySelector('.cursor')
 let intervalId;
 
-
 // Mallet movement
 window.addEventListener('mousemove', e => {
   cursor.style.top = e.pageY + 'px'
@@ -68,7 +67,7 @@ function setDelay(difficulty) {
   } else if (difficulty === "hard") {
     return Math.floor(Math.random() * (1200 - 600 + 1)) + 600;
   } else {
-    throw new Error(`Invalid difficulty level: ${difficulty}`);
+     throw new Error("Invalid difficulty value");
   }
 }
 
@@ -89,8 +88,9 @@ function setDelay(difficulty) {
 function chooseHole(holes) {
   // TODO: Write your code here.
   const index = randomInteger(0, 8);
+  //Get a random hole with the random index
   const hole = holes[index];
-
+// check if hole is the same as the last hole 
   if (hole === lastHole) {
     return chooseHole(holes);
 }
@@ -143,7 +143,7 @@ function gameOver() {
 let moleVisible = false; // Global variable to track mole visibility
 
 // This function should show and hide a mole in a hole
-unction showUp() {
+function showUp() {
   // Check if the game is still in progress
   if (time > 0 && !moleVisible) {
     moleVisible = true; // Set mole as visible
