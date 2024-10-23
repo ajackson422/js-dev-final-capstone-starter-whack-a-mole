@@ -5,6 +5,7 @@ const startButton = document.querySelector('#start');
 const score = document.querySelector('#score'); // Use querySelector() to get the score element
 const timerDisplay = document.querySelector('#timer'); // use querySelector() to get the timer element.
 const cursor = document.querySelector('.cursor')
+let intervalId;
 
 
 // Mallet movement
@@ -240,7 +241,10 @@ function startTimer() {
 */
 function whack(event) {
   // TODO: Write your code here.
+  console.log("whack!");
   updateScore();
+   // Play the audioHit sound when a mole is whacked
+   playAudio(audioHit);
   return points;
 }
 
