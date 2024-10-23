@@ -12,10 +12,9 @@ html {
 
 h1 {
   text-align: center;
-  font-size: 90px;
+  font-size: 100px;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   color: blue;
-  -webkit-text-stroke: 2px blue;
   font-size: 2em; /* Example relative font size */
 }
 
