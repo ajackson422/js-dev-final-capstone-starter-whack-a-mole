@@ -212,10 +212,11 @@ function updateScore() {
 function clearScore() {
   // TODO: Write your code here
   points = 0;
+  console.log("clearScore");
+  // This will display the score
   score.textContent = points;
   return points;
 }
-
 /**
 *
 * Updates the control board with the timer if time > 0
