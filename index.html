@@ -8,10 +8,9 @@
   <body>
     <h1 id="title"> Ashley's Whack-A-Hole </h1>
     <div>
-      <div>
-        <h2>Click start to play!</h2>
-      </div>
-      <button id="start">start</button>
+      <!-- Start Buttons and song--> 
+     <div style="text-align: center;">
+        <h2>Click <button id="start" type="button" onclick="startGame()">start</button> to play!</h2>
       <!--Mallet img on cursor -->
       <div class="cursor">
         <img src="assets/mallet.png">
@@ -53,6 +52,7 @@
       <div id="hole8" class="hole">
         <div id="mole8" class="mole"></div>
       </div>
+      <div class="mole">click here to trigger the click event on mole 1</div>
     </div>
     <script src="./src/index.js"></script>
   </body>
