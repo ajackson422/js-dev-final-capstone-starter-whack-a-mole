@@ -372,8 +372,6 @@ function startGame(difficulty){
   return "game started";
 }
 
-startButton.addEventListener("click", startGame);
-
 
 // Please do not modify the code below.
 // Used for testing purposes.
