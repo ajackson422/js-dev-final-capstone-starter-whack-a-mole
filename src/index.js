@@ -28,6 +28,9 @@ let lastHole = 0;
 let points = 0;
 let difficulty = "hard";
 
+let timeoutId;
+// Title element of ID of "title"
+const titleElement = document.querySelector('#title');
 /**
  * Generates a random integer within a range.
  *
