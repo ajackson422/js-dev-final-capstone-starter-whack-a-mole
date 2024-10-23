@@ -137,11 +137,35 @@ function gameOver() {
 * to call `showAndHide(hole, delay)`.
 *
 */
-function showUp() {
-  const delay = setDelay(difficulty);   // TODO: Update so that it uses setDelay()
-  const hole = chooseHole(holes);       // TODO: Update so that it use chooseHole()
-  return showAndHide(hole, delay);
+let moleVisible = false; // Global variable to track mole visibility
+
+// This function should show and hide a mole in a hole
+unction showUp() {
+  // Check if the game is still in progress
+  if (time > 0 && !moleVisible) {
+    moleVisible = true; // Set mole as visible
+    let delay = setDelay("easy"); // TODO: Update so that it uses setDelay()
+  const hole = chooseHole(holes);  // TODO: Update so that it use chooseHole()
+  // Show the mole
+  toggleVisibility(hole, true);
+
+  // Schedule hiding the mole after the current delay
+    setTimeout(() => {
+      // Hide the mole
+      toggleVisibility(hole, false);
+      moleVisible = false; // Set mole as not visible
+      // Schedule the next mole appearance after the hiding delay
+      setTimeout(() => {
+        showUp();
+      }, delay);
+    }, delay);
+  }
 }
+
+
+
+
+
 
 /**
 *
