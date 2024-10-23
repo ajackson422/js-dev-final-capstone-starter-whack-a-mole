@@ -32,8 +32,19 @@ h2 {
     font-size: 30px;
 }
 
-#timer{
-    color: white;
+}
+
+.startButton{
+  width: 100px;
+  height: 45px;
+  padding: 0 00px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 2px solid  #345ce2;
+  background-color: #fb0cff;
+  color: #fff;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0);
 }
 
 /* Mallet and interactive movement coding*/
@@ -55,9 +66,9 @@ h2 {
   
 }
 
-
-
-
+#timer{
+    color: white;
+}
 
 .grid {
   width: 600px;
@@ -67,13 +78,14 @@ h2 {
   margin: 0 auto;
   cursor: url('./assets/mallet.png'), pointer;
 }
-
+/* holes display */
 .hole {
   flex: 1 0 33.33%;
   overflow: hidden;
   position: relative;
 }
 
+/* Moles displayed to show up */
 .hole:after {
   display: block;
   background: url("./assets/hole.png") bottom center no-repeat;
